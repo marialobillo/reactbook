@@ -1,0 +1,13 @@
+{
+  "name" :  "descubriendo React",
+  "version" : "0.0.1",
+  "main" : "./build/descubre-react.js",
+  "license" : "MIT",
+  "dependencies" : {
+    "react" : "^0.13.2"
+  },
+  "devDependencies" : {
+    "jsx-loader" : "*",
+    "webpack" : "^1.9.10"
+  }
+}
