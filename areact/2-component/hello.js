@@ -1,10 +1,13 @@
-var Hello = React.createClass({
-    render: function(){
-	return React.DOM.div(
-	    {className: 'mystyle'},
-	    'Hello ' + this.props.name
-	);
-    }
+var CommentBox = React.createClass({
+  render: function() {
+    return (
+      <div className="commentBox">
+        Hello, world! I am a CommentBox.
+      </div>
+    );
+  }
 });
-
-React.render(Hello({name: 'Maria'}), document.body);
+ReactDOM.render(
+  <CommentBox />,
+  document.getElementById('content')
+);
