@@ -1,0 +1,11 @@
+<html>
+  <head>
+    <script src="build/react.js"></script>
+    <script src="build/JSXTransformer.js"></script>
+    
+  </head>
+  <body>
+    
+    <script  src="hello.js"></script>
+  </body>  
+</html>
