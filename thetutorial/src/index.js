@@ -1,4 +1,14 @@
+var Hello = React.createClass({
+    render: function(){
+	return (
+	    React.createElement('div', {className: "commentBox"},
+				"<h2>Hello, world! I am a CommentBox.</h2>"
+		)
+	);
+    }
+});
+
 ReactDOM.render(
-  <h1>Hello, world from a File!</h1>,
-  document.getElementById('example')
+    React.createElement(Hello, null),
+    document.getElementById('example')
 );
