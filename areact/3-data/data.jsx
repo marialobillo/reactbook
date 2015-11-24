@@ -2,11 +2,11 @@ var Card = React.createClass({
   render: function() {
     return (
       <div>
-        <img src="" alt="">
-        <h3></h3>
+        <img src="https://avatars.githubusercontent.com/u/1144759?v=3" >
+        <h3>Name Here</h3>
         <hr>
       </div>
-    )
+    );
   }
 });
 
@@ -16,7 +16,7 @@ var Main = React.createClass({
       <div>
         <Card />
       </div>
-    )
+    );
   }
 });
 
