@@ -1,10 +1,19 @@
 var Card = React.createClass({
+  getInitialState: function() {
+    return {};
+  },
+  componentDidMount: function() {
+    var component = this;
+    $.get("https://api.github.com/users/" + this.props.login , function(data){
+      component.setState(data);
+    });
+  },
   render: function() {
     return (
       <div>
-        <img src="https://avatars.githubusercontent.com/u/1144759?v=3" >
-        <h3>Name Here</h3>
-        <hr>
+        <img src={this.state.avatar_url} width="80" />
+          <h3>{this.state.name}</h3>
+          <hr />
       </div>
     );
   }
@@ -14,9 +23,10 @@ var Main = React.createClass({
   render: function() {
     return (
       <div>
-        <Card />
+        <Card login="Neniah"/>
+        <Card login="wells" />
       </div>
-    );
+    )
   }
 });
 
