@@ -1,0 +1,17 @@
+
+body{
+
+}
+
+.portada{
+  background: url("images/sky.jpeg") 7%;
+  padding: 20% 0;
+  color:#fff;
+  min-height: 500px;
+
+}
+
+.principal{
+  font-size: 6em;
+
+}
