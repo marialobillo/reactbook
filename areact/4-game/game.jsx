@@ -1,28 +1,37 @@
 var StarsFrame = React.createClass({
   render: function(){
     return (
-      <div>
-        ...
+      <div id="stars-frame">
+        <div className="well">
+          <span className="glyphicon glyphicon-star"></span>
+          <span className="glyphicon glyphicon-star"></span>
+          <span className="glyphicon glyphicon-star"></span>
+          <span className="glyphicon glyphicon-star"></span>
+          <span className="glyphicon glyphicon-star"></span>
+
+        </div>
       </div>
     );
   }
 });
 
-var StarsFrame = React.createClass({
+var ButtonFrame = React.createClass({
   render: function(){
     return (
-      <div>
-        ...
+      <div id="button-frame">
+        <button className="btn btn-primary">=</button>
       </div>
     );
   }
 });
 
-var StarsFrame = React.createClass({
+var AnswerFrame = React.createClass({
   render: function(){
     return (
-      <div>
-        ...
+      <div id="answer-frame">
+        <div className="well">
+          ....
+        </div>
       </div>
     );
   }
@@ -35,6 +44,8 @@ var Game = React.createClass({
       <div id="game">
         <h2>Play Nine</h2>
         <StarsFrame />
+        <ButtonFrame />
+        <AnswerFrame />
       </div>
     );
   }

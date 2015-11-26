@@ -1,17 +1,19 @@
-
-body{
-
+#stars-frame .glyphicon {
+  margin: 0.3em;
+  font-size: 1.75em;
 }
 
-.portada{
-  background: url("images/sky.jpeg") 7%;
-  padding: 20% 0;
-  color:#fff;
-  min-height: 500px;
-
+#stars-frame, #answer-frame {
+  width: 40%;
+  float:left;
 }
 
-.principal{
-  font-size: 6em;
+#button-frame {
+  width:20%;
+  float:left;
+  text-align: center;
+}
 
+#stars-frame .well, #answer-frame .well {
+  height: 150px;
 }
