@@ -34,4 +34,5 @@
 #numbers-frame .selected-true {
   background-color: #e8e8e8;
   color: #ddd;
+  cursor: not-allowed;
 }
