@@ -18,3 +18,13 @@
 #stars-frame .well, #answer-frame .well {
   height: 150px;
 }
+
+#numbers-frame .number{
+  display: inline-block;
+  margin: 0.5em;
+  background-color: #81FF99;
+  width: 30px;
+  text-align: center;
+  font-size: 22px;
+  border-radius: 50%;
+}
