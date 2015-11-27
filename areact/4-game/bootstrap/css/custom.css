@@ -19,7 +19,7 @@
   height: 150px;
 }
 
-#numbers-frame .number{
+#numbers-frame .number, #answer-frame .well span{
   display: inline-block;
   margin: 0.5em;
   background-color: #81FF99;
@@ -27,4 +27,11 @@
   text-align: center;
   font-size: 22px;
   border-radius: 50%;
+  cursor: pointer;
+  border-bottom: 1px solid #bbb;
+}
+
+#numbers-frame .selected-true {
+  background-color: #e8e8e8;
+  color: #ddd;
 }
