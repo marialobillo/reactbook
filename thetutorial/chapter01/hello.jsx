@@ -16,4 +16,4 @@ var Message = React.createClass({
 });
 
 
-ReactDOM.render(<Message />, document.body);
+ReactDOM.render(<Message />, document.getElementById('example'));
