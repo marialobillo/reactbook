@@ -1,3 +1,14 @@
+var Tasks = React.createClass({
+  render: function() {
+    return (
+      <ul>
+        {this.props.children}
+      </ul>
+    );
+  }
+});
+
+
 var Task = React.createClass({
   propTypes: {
     name: React.PropTypes.string.isRequired,
@@ -34,11 +45,12 @@ var ToDo = React.createClass({
   render: function() {
     return (
       <ul>
-        <Task ref='one' name="Introduction" done='true' />
-        <Task name='Chapter 1 - First Component' done='true' />
-        <Task name='Chapter 2 - Properties'  />
-        <Task name='El cuatro de abordo'/>
-        <Image />
+        <Tasks>
+          <Task ref='one' name="Introduction" done='true' />
+          <Task name='Chapter 1 - First Component' done='true' />
+          <Task name='Chapter 2 - Properties'  />
+          <Task />
+        </Tasks>
       </ul>
 
     );
