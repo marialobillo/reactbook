@@ -1,7 +1,10 @@
 var Task = React.createClass({
+  propTypes: {
+    name: React.PropTypes.string.isRequired,
+    done: React.PropTypes.bool
+  },
   getDefaultProps: function() {
     return ({
-      name: 'Unknown chapter',
       done: false
     });
   },
@@ -16,15 +19,28 @@ var Task = React.createClass({
   }
 });
 
+var Image = React.createClass({
+  render: function(){
+    return (
+      <img {...this.props}/>
+    );
+  }
+});
+
 var ToDo = React.createClass({
+  componentDidMount: function(){
+    console.log(this.refs.one.getDOMNode());
+  },
   render: function() {
     return (
       <ul>
-        <Task name="Introduction" done='true' />
+        <Task ref='one' name="Introduction" done='true' />
         <Task name='Chapter 1 - First Component' done='true' />
         <Task name='Chapter 2 - Properties'  />
-        <Task />
+        <Task name='El cuatro de abordo'/>
+        <Image />
       </ul>
+
     );
   }
 });
