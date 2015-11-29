@@ -26,3 +26,7 @@ a{
 .none{
   background-color: none;
 }
+
+ul{
+  text-decoration: none;
+}
