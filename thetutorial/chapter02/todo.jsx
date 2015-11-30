@@ -1,9 +1,11 @@
 var Tasks = React.createClass({
   render: function() {
     return (
-      <ul>
-        {this.props.children}
-      </ul>
+      <div>
+        <ul>
+          {this.props.children}
+        </ul>
+      </div>
     );
   }
 });
@@ -22,7 +24,7 @@ var Task = React.createClass({
 
   render: function() {
     return (
-      <li>
+      <li className={this.props.done ? 'done' : ''}>
         <input type="checkbox" checked={this.props.done} />
         {this.props.name}
       </li>
@@ -49,7 +51,7 @@ var ToDo = React.createClass({
           <Task ref='one' name="Introduction" done='true' />
           <Task name='Chapter 1 - First Component' done='true' />
           <Task name='Chapter 2 - Properties'  />
-          <Task />
+          <Task name='Unknown'/>
         </Tasks>
       </ul>
 

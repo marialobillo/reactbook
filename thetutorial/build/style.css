@@ -30,3 +30,7 @@ a{
 ul{
   text-decoration: none;
 }
+
+.done{
+  font-size: 3em;
+}
