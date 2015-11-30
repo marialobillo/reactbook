@@ -15,12 +15,13 @@ var Task = React.createClass({
   propTypes: {
     name: React.PropTypes.string.isRequired,
     done: React.PropTypes.bool,
-    updated: React.PropTypes.bool
+    updated: React.PropTypes.bool,
   },
   getDefaultProps: function() {
     return ({
       done: false,
-      updated: false
+      updated: false,
+      count: 0
     });
   },
   opUpdate: function(){
@@ -29,10 +30,11 @@ var Task = React.createClass({
     });
   },
   render: function() {
+    var subject = '(Subject: ' + this.props.name + ')';
     return (
       <li className={this.props.done ? 'done' : ''} onClick={this.onUpdate}>
         <input type="checkbox" checked={this.props.done} />
-        {this.props.name}
+        {this.props.name}<small>{subject}</small>
       </li>
     );
   }
