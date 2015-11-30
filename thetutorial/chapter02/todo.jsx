@@ -14,17 +14,23 @@ var Tasks = React.createClass({
 var Task = React.createClass({
   propTypes: {
     name: React.PropTypes.string.isRequired,
-    done: React.PropTypes.bool
+    done: React.PropTypes.bool,
+    updated: React.PropTypes.bool
   },
   getDefaultProps: function() {
     return ({
-      done: false
+      done: false,
+      updated: false
     });
   },
-
+  opUpdate: function(){
+    this.setState({
+      updated: true
+    });
+  },
   render: function() {
     return (
-      <li className={this.props.done ? 'done' : ''}>
+      <li className={this.props.done ? 'done' : ''} onClick={this.onUpdate}>
         <input type="checkbox" checked={this.props.done} />
         {this.props.name}
       </li>
