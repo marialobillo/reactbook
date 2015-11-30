@@ -12,11 +12,7 @@ var Heroes = React.createClass({
     });
   },
   componentDidMount: function(){
-    setTimeout(function() {
-      this.setState({
-        list: heroesListData
-      });
-    }.bind(this), 2000);
+    this._fetchData()
   },
   render: function(){
     if (!this.state.list.length) {
@@ -26,7 +22,7 @@ var Heroes = React.createClass({
       <ul>
         {this.state.list.map(function(heroe, index){
           return (<li key={index}>
-          //  {heroe.name} the {heroe.power}
+          // {heroe.name} the {heroe.power}
                 </li>);
         })}
       </ul>
