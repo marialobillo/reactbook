@@ -14,6 +14,10 @@ var Heroes = React.createClass({
   componentDidMount: function(){
     this._fetchData()
   },
+  onResetClick: function(event){
+    event.preventDefault();
+    //this.setState() ---------------------------------- HERE
+  },
   render: function(){
     if (!this.state.list.length) {
       return (<div> No heroes!</div>);
