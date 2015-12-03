@@ -2,10 +2,17 @@ var Elemento = React.createClass({
   render: function(){
     return (
       <button className="btn btn-primary">
-        Messages <span className="badge">4</span>
+        {this.props.title} <span className="badge">{this.props.number}</span>
       </button>
     );
   }
 });
 
-ReactDOM.render(<Elemento />, document.getElementById('content'));
+var options = {
+  title: 'Inbox',
+  number: 32
+};
+
+var element = React.createElement(Elemento, options);
+
+ReactDOM.render( element, document.getElementById('content'));
