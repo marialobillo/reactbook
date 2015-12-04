@@ -17,8 +17,7 @@ var Thumbnail = React.createClass({
             <h3>{this.props.header}</h3>
             <p>{this.props.description}</p>
             <p>
-              <a href="#" className="btn btn-primary" role="button">Button</a>
-              <a href="#" className="btn btn-default" role="button">Button</a>
+              <Badge title={this.props.title} number={this.props.number}/>
             </p>
           </div>
         </div>
@@ -27,10 +26,11 @@ var Thumbnail = React.createClass({
 });
 
 var options = {
-  title: 'Sent',
-  number: 12,
+  title: 'See Tutorials',
+  number: 32,
   header: 'Learn React',
-  description: 'React is fantastic new library for making fast, dynamic pages.'
+  description: 'React is fantastic new library for making fast, dynamic pages.',
+  imageUrl: 'http://formatjs.io/img/react.svg'
 }
 
 var element = React.createElement(Thumbnail, options);
