@@ -1,3 +1,5 @@
+require('app')
+
 var Badge = React.createClass({
   render: function(){
     return (
