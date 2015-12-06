@@ -1,4 +1,4 @@
-var ThumbnailList = require('ThumbnailList')
+var ThumbnailList = require('./thumbnail-List')
 var options = {
   thumbnailData: [{
   title: 'See Tutorials',
