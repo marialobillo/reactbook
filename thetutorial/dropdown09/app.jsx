@@ -1,4 +1,12 @@
 
+var ListItem = React.createClass({
+  render: function(){
+    return (
+      <li><a href="">{this.props.item}</a></li>
+    );
+  }
+});
+
 var Badge = React.createClass({
   render: function(){
     return (
@@ -14,32 +22,27 @@ var Badge = React.createClass({
   }
 });
 
-var ListItem = React.createClass({
-    render: function(){
-      return (
-        <li>{this.props.item}</li>
-      );
-    }
-});
 
-var List = React.createClass({
-  render: function() {
 
-    return (
-      Hello
-    );
-  }
-});
+
 
 var Dropdown = React.createClass({
   handleClick: function(){
     alert('Hello from dropdown')
   },
   render: function(){
+    var list = this.props.items.map(function(item){
+      return (
+        <ListItem item={item} />
+      );
+    });
     return (
       <div className="btn-group">
         <Badge whenClicked={this.handleClick} className="btn-success" title={this.props.title}
           subTitleClassName="caret" subTitle="29"/>
+        <ul>
+          {list}
+        </ul>
       </div>
     );
   }
