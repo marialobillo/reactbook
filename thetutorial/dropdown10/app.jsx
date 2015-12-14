@@ -23,12 +23,12 @@ var Badge = React.createClass({
 });
 
 
-
-
-
 var Dropdown = React.createClass({
   handleClick: function(){
     alert('Hello from dropdown')
+  },
+  getInitialState: function(){
+    return { open: true }
   },
   render: function(){
     var list = this.props.items.map(function(item){
@@ -38,9 +38,9 @@ var Dropdown = React.createClass({
     });
     return (
       <div className="btn-group">
-        <Badge whenClicked={this.handleClick} className="btn-success" title={this.props.title}
+        <Badge whenClicked={this.handleClick} className="btn btn-success" title={this.props.title}
           subTitleClassName="caret" subTitle="29"/>
-        <ul className="dropdown-menu">
+        <ul className={"dropdown-menu " + (this.state.open ? "show" : "") }>
           {list}
         </ul>
       </div>
