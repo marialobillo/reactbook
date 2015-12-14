@@ -25,10 +25,10 @@ var Badge = React.createClass({
 
 var Dropdown = React.createClass({
   handleClick: function(){
-    alert('Hello from dropdown')
+    this.setState({open: !this.state.open});
   },
   getInitialState: function(){
-    return { open: true }
+    return { open: false }
   },
   render: function(){
     var list = this.props.items.map(function(item){
