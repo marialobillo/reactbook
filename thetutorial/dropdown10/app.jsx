@@ -33,9 +33,9 @@ var Dropdown = React.createClass({
   render: function(){
     var list = this.props.items.map(function(item){
       return (
-        <ListItem item={item} />
+        <ListItem item={item} whenItemClicked />
       );
-    });
+    }.bind(this));
     return (
       <div className="btn-group">
         <Badge whenClicked={this.handleClick} className="btn btn-success" title={this.props.title}
