@@ -1,7 +1,7 @@
 
 var ListItem = React.createClass({
   handleClick: function(){
-    this.props.whenItemClicked();
+    this.props.whenItemClicked(this.props.items);
     console.log.('I was clicked!');
   },
   render: function(){
@@ -34,8 +34,8 @@ var Dropdown = React.createClass({
   getInitialState: function(){
     return { open: false }
   },
-  handleItemClick: function(){
-
+  handleItemClick: function(item){
+    console.log(item);
   },
   render: function(){
     var list = this.props.items.map(function(item){
