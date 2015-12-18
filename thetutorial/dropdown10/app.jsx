@@ -6,7 +6,10 @@ var ListItem = React.createClass({
   },
   render: function(){
     return (
-      <li><a onClick={this.handleClick} href="">{this.props.item}</a></li>
+      <li><a
+        onClick={this.handleClick}
+        href=""
+        className={this.props.className} >{this.props.item}</a></li>
     );
   }
 });
