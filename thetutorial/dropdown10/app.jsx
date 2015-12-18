@@ -1,8 +1,8 @@
 
 var ListItem = React.createClass({
   handleClick: function(){
-    this.props.whenItemClicked(this.props.items);
-    console.log.('I was clicked!');
+    this.props.whenItemClicked(this.props.item);
+    console.log('I was clicked!');
   },
   render: function(){
     return (
@@ -35,18 +35,26 @@ var Dropdown = React.createClass({
     return { open: false }
   },
   handleItemClick: function(item){
-    console.log(item);
+    this.setState({
+      open: false,
+      itemTitle: item
+    });
   },
   render: function(){
     var list = this.props.items.map(function(item){
       return (
-        <ListItem item={item} whenItemClicked={this.handleItemClick} />
+        <ListItem item={item}
+          whenItemClicked={this.handleItemClick}
+          className={this.state.itemTitle === item ? 'active' : "" } />
       );
     }.bind(this));
     return (
       <div className="btn-group">
-        <Badge whenClicked={this.handleClick} className="btn btn-success" title={this.props.title}
-          subTitleClassName="caret" subTitle="29"/>
+        <Badge whenClicked={this.handleClick}
+          className="btn btn-success"
+          title={this.state.itemTitle || this.props.title}
+          subTitleClassName="caret"
+          subTitle="29"/>
         <ul className={"dropdown-menu " + (this.state.open ? "show" : "") }>
           {list}
         </ul>
