@@ -1,6 +1,8 @@
 var React = require('react');
+var ReactFire = require('reactfire');
+var Firebase = require('firebase');
 
-var Hello = React.createClass({
+var App = React.createClass({
   render: function() {
     return (<h1 className="red">
       Hello, React!!
@@ -10,5 +12,5 @@ var Hello = React.createClass({
 
 
 
-var element = React.createElement(Hello, {});
+var element = React.createElement(App, {});
 React.render(element, document.querySelector('.container'));
