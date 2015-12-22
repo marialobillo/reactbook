@@ -1,0 +1,42 @@
+html, body {
+  padding: 10px;
+  margin: 10px;
+}
+
+.fancy-input {
+  position: relative;
+}
+
+.fancy-input input {
+  padding: 8px;
+  margin: 2px;
+  border: 1px solid #aaa;
+  border-radius: 5px;   
+}
+
+.fancy-input .placeholder {
+  position: absolute;
+  display: block;
+  top: 10px;
+  left: 12px;
+
+  color: gray;
+  font-size: 16px;
+  pointer-events: none;
+
+  transition: 0.3s ease-in-out;
+}
+
+.fancy-input .stamp {
+  position: absolute;
+  display: block;
+  top: 1px;
+  left: 11px;
+
+  color: blue;
+  font-size: 10px;
+  font-weight: bold;
+  pointer-events: none;
+
+  transition: 0.3s ease-in-out;
+}

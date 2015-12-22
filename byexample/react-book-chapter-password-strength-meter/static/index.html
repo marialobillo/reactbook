@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Password Strength Meter Example</title>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" type="text/css" 
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />        
+</head>
+<body>
+<div class="container">
+  <div class="row">
+    <h1>Password Strength Meter Example (Static):</h1>
+
+    <div class="col-md-8">
+      <div class="form-group has-success has-feedback">
+        <label class="control-label"
+               for="password-input">Great Password</label>
+        <input type="password" 
+               class="form-control" 
+               id="password-input"
+               value="FW&$2iVaFt3va6bGu4Bd"
+               placeholder="Password" />
+        <span class="glyphicon glyphicon-ok form-control-feedback" 
+              aria-hidden="true"></span>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <div class="progress">
+            <div class="progress-bar progress-bar-success" style="width:100%"></div>
+          </div>
+          <h5>A good password is:</h5>
+          <ul>
+            <li class="text-success"><small>6&plus; characters</small></li>
+            <li class="text-success"><small>with at least one digit</small></li>
+            <li class="text-success"><small>with at least one special character</small></li>
+          </ul>          
+        </div>
+      </div>
+    </div>
+    <div class="col-md-8">
+      <div class="form-group has-warning has-feedback">
+        <label class="control-label"
+               for="password-input">Can-be-better Password</label>
+        <input type="password" 
+               class="form-control" 
+               id="password-input" 
+               value="mwhkz1"
+               placeholder="Password" />
+        <span class="glyphicon glyphicon-warning-sign form-control-feedback" 
+              aria-hidden="true"></span>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <div class="progress">
+            <div class="progress-bar progress-bar-warning" style="width:66%"></div>
+          </div>
+          <h5>A good password is:</h5>
+          <ul>
+            <li class="text-success"><small>6&plus; characters</small></li>
+            <li class="text-success"><small>with at least one digit</small></li>
+            <li class="text-danger"><small>with at least one special character</small></li>
+          </ul>          
+        </div>
+      </div>        
+    </div>
+    <div class="col-md-8">
+      <div class="form-group has-error has-feedback">
+        <label class="control-label"
+               for="password-input">Bad Password</label>
+        <input type="password" 
+               class="form-control" 
+               id="password-input" 
+               value="abcd$"
+               placeholder="Password" />
+        <span class="glyphicon glyphicon-remove form-control-feedback" 
+              aria-hidden="true"></span>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <div class="progress">
+            <div class="progress-bar progress-bar-danger" style="width:33%"></div>
+          </div>
+          <h5>A good password is:</h5>
+          <ul>
+            <li class="text-danger"><small>6&plus; characters</small></li>
+            <li class="text-danger"><small>with at least one digit</small></li>
+            <li class="text-success"><small>with at least one special character</small></li>
+          </ul>          
+        </div>
+      </div>        
+        
+    </div>
+
+  </div>
+</div>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</body>
+</html>
