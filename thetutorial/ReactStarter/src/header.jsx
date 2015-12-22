@@ -6,7 +6,7 @@ module.exports = React.createClass({
       <div className="input-group">
         <input type="text" className="form-control"/>
         <span className="input-group-btn">
-          <button className="btn btn-info" type="button">Add</button>
+          <button className="btn btn-danger" type="button">Add</button>
         </span>
       </div>
     );
