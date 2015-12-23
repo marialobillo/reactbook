@@ -13,7 +13,7 @@ class OneTimeClickLink extends React.Component {
     if (this.state.clicked === false) {
       return (<a href="#" id="click" onClick={this.linkClicked}>Click me</a>);
     } else {
-      return (<span>You clicked the link</span>);
+      return (<span>Yeah, You clicked the link</span>);
     }
   }
 }
@@ -32,7 +32,7 @@ class HelloWorldApp extends React.Component {
   render() {
     return (
       <div id="two-tags">
-        <HelloWorld name="Peter" />
+        <HelloWorld name="Maria" />
         <OneTimeClickLink />
       </div>
     );
