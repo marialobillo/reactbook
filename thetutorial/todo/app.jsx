@@ -9,16 +9,15 @@ var TaskList = React.createClass({
                     <div className="form-group text-center">
                     <input className="toggle"
                             aria-hidden="true"
-                            type="checkbox"
-                        >
-                        {" "}
-                        {task}{" "}
+                            type="checkbox" />
+
+                        {task}
                             <button
                               className="glyphicon glyphicon-trash btn btn-danger"
                               aria-hidden="true"
                               onClick={this.props.deleteTask}
                               value={taskIndex} ></button>
-                        </input>
+
                     </div>
 
                 )}

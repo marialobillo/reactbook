@@ -41,7 +41,7 @@ class HelloWorldApp extends React.Component {
   }
 }
 
-React.render(
+ReactDOM.render(
   <HelloWorldApp />,
   document.getElementById("greeting")
 );
